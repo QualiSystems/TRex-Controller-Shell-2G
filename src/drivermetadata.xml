@@ -1,0 +1,36 @@
+<Driver Description="TRex controller shell" MainClass="trex_driver.TrexController2GDriver"  Name="TRex Controller 2G Shell" Version="3.0.0" PythonVersion="3">
+    <Layout>
+
+        <Category Name="Hidden Commands">
+
+            <Command Name="cleanup_reservation" EnableCancellation="true" Tags="" />
+
+            <Command Name="cleanup" Tags="" />
+
+            <Command Name="keep_alive" EnableCancellation="true" Tags="" />
+
+        </Category>
+
+        <Command DisplayName="Load Configuration" Description="Reserve ports and load configuration files" Name="load_config">
+            <Parameters>
+                <Parameter DisplayName="Configuration Files Folder" Description="Full path to the configuration files folder" Type="String" Mandatory="True" Name="config_file_location" />
+            </Parameters>
+        </Command>
+
+        <Command DisplayName="Start Traffic" Description="Start traffic on all ports" Name="start_traffic">
+            <Parameters>
+                <Parameter DisplayName="Block" Description="True - return after traffic finish to run, False - return immediately" Type="Lookup" AllowedValues="True,False" DefaultValue="False" Mandatory="False" Name="blocking" />
+            </Parameters>
+        </Command>
+
+        <Command DisplayName="Stop Traffic" Description="Stop traffic on all ports" Name="stop_traffic" />
+
+        <Command DisplayName="Get Statistics" Description="Get real time statistics as sandbox attachment" Name="get_statistics">
+            <Parameters>
+                <Parameter DisplayName="View Name" Description="The requested view name, see shell's documentation for details" Type="String" Mandatory="True" Name="view_name" />
+                <Parameter DisplayName="Output Type" Description="CSV or JSON" Type="Lookup" AllowedValues="csv,json" DefaultValue="csv" Mandatory="False" Name="output_type" />
+            </Parameters>
+        </Command>
+
+    </Layout>
+</Driver>
