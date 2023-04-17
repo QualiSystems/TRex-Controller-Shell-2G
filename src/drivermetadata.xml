@@ -25,7 +25,7 @@
 
         <Command DisplayName="Stop Traffic" Description="Stop traffic on all ports" Name="stop_traffic" />
 
-        <Command DisplayName="Get Statistics" Description="Get real time statistics as sandbox attachment" Name="get_statistics">
+        <Command DisplayName="Get Statistics" Description="Get view statistics" Name="get_statistics">
             <Parameters>
                 <Parameter DisplayName="View Name" Description="The requested view name, see shell's documentation for details" Type="String" Mandatory="True" Name="view_name" />
                 <Parameter DisplayName="Output Type" Description="CSV or JSON" Type="Lookup" AllowedValues="csv,json" DefaultValue="csv" Mandatory="False" Name="output_type" />

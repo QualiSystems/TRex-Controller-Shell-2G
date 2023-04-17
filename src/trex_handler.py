@@ -1,5 +1,5 @@
 """
-IxNetwork controller handler.
+TRex controller handler.
 """
 import csv
 import io
