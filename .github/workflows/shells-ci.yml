@@ -48,7 +48,7 @@ jobs:
         run: shellfoundry pack
   check-version:
     name: Check version
-    if: ${{ github.ref == 'refs/heads/master' && github.event_name == 'push' }}
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -67,7 +67,7 @@ jobs:
           cd ${{ github.event.repository.name }}
           git checkout -qf ${{ github.head_ref }}
           echo "Check that shell version increased"
-          current_version=$(git describe --tags --abbrev=0)
+          current_version=$(git describe --tags --abbrev=0 || echo 0)
           echo "Current shell version $current_version"
           new_version=$(yq .metadata.template_version shell-definition.yaml)
           new_version=${new_version:1:-1}
@@ -80,7 +80,7 @@ jobs:
           exit 1
   create-gh-release:
     needs: [pre-commit, pack, check-version]
-    if: ${{ github.ref == 'refs/heads/master' && github.event_name == 'push' }}
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -118,4 +118,4 @@ jobs:
           draft: true
           name: ${{ env.REPO }} ${{ env.TAG }}
           tag: ${{ env.TAG }}
-          commit: master
+          commit: main
