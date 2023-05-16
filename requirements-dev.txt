@@ -1,5 +1,9 @@
--r requirements-ci.txt
+-r src/requirements.txt
 
 # Testing
 pytest
-shellfoundry_traffic
+
+# Pipeline
+pre-commit
+pylint
+pylint_pytest

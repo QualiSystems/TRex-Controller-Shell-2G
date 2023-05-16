@@ -1,4 +1,0 @@
--r src/requirements.txt
-
-# Pipeline
-pre-commit

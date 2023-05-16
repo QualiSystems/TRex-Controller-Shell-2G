@@ -29,10 +29,11 @@ repos:
             --max-line-length=127,
             '--ignore=D102,D200,F401,F811'
         ]
-  - repo: https://github.com/pre-commit/mirrors-pylint
-    rev: v3.0.0a5
+  - repo: local
     hooks:
       - id: pylint
+        name: pylint
+        entry: pylint
         language: system
         types: [python]
         args: [
