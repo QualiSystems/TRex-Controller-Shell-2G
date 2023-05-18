@@ -1,20 +1,20 @@
 
 ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
-# **TRex Controller 2G Shell**  
+# TRex Controller 2G Shell
 
-Release date: April 2023
+Release date: May 2023
 
-Shell version: 3.0.1
+Shell version: 3.0.2
 
-Document version: 1.0
+Document version: 3.0.0
 
-### **TRex Controller 2G Shell**
-The **TRex Controller** shell provides automation commands to run on the chassis, such as Load Configuration, Start/Stop Traffic, and Get Statistics.
-The current version of **TRex Controller** shell supports STL traffic only. 
+### Overview
+The **TRex Controller 2G** shell provides automation commands to run on the chassis, such as Load Configuration, Start/Stop Traffic, and Get Statistics.
+The current version of **TRex Controller 2G** shell supports STL traffic only. 
 
-The **TRex Controller** shell works with the **TRex Chassis** shell. For information on **TRex Chassis** shell, see the following:
-* [TRex Chassis 2G Shell](https://github.com/QualiSystems/TRex-Chassis-Shell-2G)
+The **TRex Controller 2G** shell works with the **TRex Chassis 2G** shell.
+- For information on **TRex Chassis 2G** shell, see the following: [TRex Chassis 2G Shell](https://github.com/QualiSystems/TRex-Chassis-Shell-2G)
 
 For more information on **TRex STL**, see the official **Cisco TRex** product documentation.
 
@@ -26,12 +26,16 @@ For detailed information about the shell’s structure and attributes, see the [
 Note that all attributes except USER are not relevant for the TRex Controller.
 
 ### Supported OS
-▪ Windows
+- Windows
 
 ### Requirements
-
-▪ TRex: 3.0.2 and above
-
-▪ CloudShell version: v2022 1.0 and above
+- TRex: 2.99 and above
+- CloudShell version: v2022 1.0 and above
 
 Older releases of TRex and CloudShell might work, but are not guaranteed.
+
+### What's New
+
+For release updates, see the shell's GitHub release pages as follows:
+- [Cisco TRex Controller 2 Gen Shell release page](https://github.com/QualiSystems/TRex-Controller-Shell-2G/releases)
+- [Cisco TRex Chassis 2 Gen Shell release page](https://github.com/QualiSystems/TRex-Chassis-Shell-2G/releases)
